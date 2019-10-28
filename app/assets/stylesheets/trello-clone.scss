@@ -4373,3 +4373,92 @@ input[type=text], input[type=password], input[type=email] {
 .quiet, .quiet a {
   color: #838c91;
 }
+
+.new-board-form {
+  background: white;
+  border: 1px solid #D6DADC;
+  border-radius: 3px;
+  box-shadow: 0 1px 6px rgba(0,0,0,.15);
+  font-size: 0.875rem;
+  left: 0;
+  max-height: 300px;
+  max-width: 100%;
+  padding: 5px 10px 10px 10px;
+  position: absolute;
+  top: 0;
+  width: 300px;
+}
+
+.new-board-form header {
+  border-bottom: 1px solid #D6DADC;
+  color: #8c8c8c;
+  margin-bottom: 10px;
+  padding: 7px 0px 10px 10px;
+  text-align: center;
+}
+
+// The first selector is to match /ui/create_board
+.new-board-form header a,
+.board-tile .new-board-form header a,
+.board-tile .new-board-form header a:link,
+.board-tile .new-board-form header a:visited,
+.board-tile .new-board-form header a:hover,
+.board-tile .new-board-form header a:active {
+  background: #fff;
+  float: right;
+  height: auto;
+  padding: 0;
+}
+
+.new-board-form dt {
+  color: #4d4d4d;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.new-board-form input {
+  background: #E2E4E6;
+  border: 1px solid #CDD2D4;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 7px;
+  -webkit-transition: background 85ms ease-in;
+  transition: background 85ms ease-in;
+  width: 100%;
+}
+
+.new-board-form input[type="text"]:focus {
+  background: #ffffff;
+}
+
+.new-board-form button {
+  background-image: linear-gradient(rgb(97, 189, 79) 0px, rgb(90, 172, 68) 100%);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #3F6F21;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.6; 
+  padding: 7px 30px;
+  margin-top: 30px;
+}
+
+.new-board-form button:hover {
+  cursor: pointer;
+}
+
+.new-board-form button:hover,
+.new-board-form button:focus {
+  background-image: linear-gradient(to bottom,#5AAC44 0,#519839 100%);
+}
+
+.button.disabled, .button.disabled:active, .button.disabled:hover, button.disabled, button.disabled:active, button.disabled:hover, input[type=button].disabled, input[type=button].disabled:active, input[type=button].disabled:hover, input[type=submit].disabled, input[type=submit].disabled:active, input[type=submit].disabled:hover, input[type=submit]:disabled, input[type=submit]:disabled:hover {
+  background: #F8F9F9;
+  box-shadow: none;
+  color: #B6BBBF;
+  cursor: default;
+  font-weight: 700;
+}
