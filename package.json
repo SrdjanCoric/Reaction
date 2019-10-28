@@ -10,6 +10,8 @@
     "axios": "^0.19.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "debounce": "^1.2.0",
+    "enzyme": "^3.10.0",
+    "jest": "^24.9.0",
     "jquery": "^3.4.1",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",
@@ -25,5 +27,14 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.9.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint app/javascript/**/* --color"
+  },
+  "jest": {
+    "roots": [
+      "./app/javascript"
+    ]
   }
 }
