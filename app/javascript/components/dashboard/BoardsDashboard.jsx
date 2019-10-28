@@ -1,7 +1,6 @@
 import React from "react";
 
 import BoardTile from "./BoardTile";
-import CreateBoardTile from "./CreateBoardTile";
 
 const BoardsDashboard = props => {
   let boards = props.boards.map(board => (

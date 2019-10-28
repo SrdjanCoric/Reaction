@@ -1,9 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
+import * as actions from "../../actions/BoardActions";
+import BoardsDashboard from "./BoardsDashboard";
 
 const mapStateToProps = state => {
   return {
     boards: state.boards
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onFetchBoards: () => {
+      dispatch(actions.fetchBoards());
+    }
   };
 };
 
@@ -28,7 +38,7 @@ class BoardsDashboardContainer extends React.Component {
     return (
       <div>
         <BoardsDashboard
-          boards={props.boards}
+          boards={this.props.boards}
           onNewBoardClick={this.handleNewBoardClick}
         />
       </div>
@@ -38,5 +48,5 @@ class BoardsDashboardContainer extends React.Component {
 
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(BoardsDashboardContainer);
