@@ -1,7 +1,42 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const BoardsDashboardContainer = () => {
-  return <h1>Hello from container!</h1>;
+const mapStateToProps = state => {
+  return {
+    boards: state.boards
+  };
 };
 
-export default BoardsDashboardContainer;
+class BoardsDashboardContainer extends React.Component {
+  state = {
+    popover: {
+      visible: false,
+      attachedTo: null,
+      type: null
+    }
+  };
+  handleNewBoardClick = e => {
+    this.setState({
+      popover: {
+        visible: true,
+        attachedTo: e.currentTarget,
+        type: "new-board"
+      }
+    });
+  };
+  render() {
+    return (
+      <div>
+        <BoardsDashboard
+          boards={props.boards}
+          onNewBoardClick={this.handleNewBoardClick}
+        />
+      </div>
+    );
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  null
+)(BoardsDashboardContainer);
