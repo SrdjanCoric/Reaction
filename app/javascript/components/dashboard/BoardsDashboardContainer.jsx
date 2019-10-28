@@ -39,6 +39,19 @@ class BoardsDashboardContainer extends React.Component {
       }
     });
   };
+
+  handleClosePopoverClick = e => {
+    e.preventDefault();
+
+    this.setState({
+      popover: {
+        visible: false,
+        attachedTo: null,
+        type: null
+      }
+    });
+  };
+
   render() {
     return (
       <div>
