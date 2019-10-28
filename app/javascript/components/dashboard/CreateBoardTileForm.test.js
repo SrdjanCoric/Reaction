@@ -3,13 +3,13 @@ import Adapter from "enzyme-adapter-react-16";
 import { mount, configure } from "enzyme";
 
 configure({ adapter: new Adapter() });
-import NewBoardForm from "./NewBoardForm";
+import CreateBoardTileForm from "./CreateBoardTileForm";
 jest.mock("../../lib/ApiClient");
 
-describe("NewBoardForm", () => {
+describe("CreateBoardTileForm", () => {
   it("displays the `title` prop", () => {
     const wrapper = mount(
-      <NewBoardForm
+      <CreateBoardTileForm
         title="This is my title!!"
         onTextChange={() => {}}
         onCloseClick={() => {}}
