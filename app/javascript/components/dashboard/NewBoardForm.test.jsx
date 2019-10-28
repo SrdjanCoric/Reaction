@@ -1,10 +1,10 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import React from "react";
+import Adapter from "enzyme-adapter-react-16";
+import { mount, configure } from "enzyme";
 
-import NewBoardForm from './NewBoardForm';
-
-import apiClient from '../../lib/ApiClient';
-jest.mock('../../lib/ApiClient');
+configure({ adapter: new Adapter() });
+import NewBoardForm from "./NewBoardForm";
+jest.mock("../../lib/ApiClient");
 
 describe("NewBoardForm", () => {
   it("displays the `title` prop", () => {
@@ -17,8 +17,6 @@ describe("NewBoardForm", () => {
       />
     );
 
-    expect(
-      wrapper.html().indexOf('value="This is my title!!"')
-    )
+    expect(wrapper.html().indexOf('value="This is my title!!"'));
   });
 });
