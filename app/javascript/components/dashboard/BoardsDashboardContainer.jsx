@@ -25,6 +25,9 @@ class BoardsDashboardContainer extends React.Component {
       type: null
     }
   };
+  componentDidMount() {
+    this.props.onFetchBoards();
+  }
   handleNewBoardClick = e => {
     this.setState({
       popover: {
