@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import * as actions from "../../actions/BoardActions";
 import BoardsDashboard from "./BoardsDashboard";
+import Popover from "../shared/Popover";
+import NewBoardFormContainer from "./NewBoardFormContainer";
 
 const mapStateToProps = state => {
   return {
@@ -44,6 +46,9 @@ class BoardsDashboardContainer extends React.Component {
           boards={this.props.boards}
           onNewBoardClick={this.handleNewBoardClick}
         />
+        <Popover {...this.state.popover} coverTarget={true}>
+          <NewBoardFormContainer onCloseClick={this.handleClosePopoverClick} />
+        </Popover>
       </div>
     );
   }
